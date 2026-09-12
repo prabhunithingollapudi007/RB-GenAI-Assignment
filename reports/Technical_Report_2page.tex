@@ -1,0 +1,120 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=1.6cm]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{primary}{RGB}{11,61,92}
+\definecolor{accent}{RGB}{196,92,38}
+\definecolor{muted}{RGB}{90,106,122}
+
+\hypersetup{colorlinks=true,linkcolor=primary,urlcolor=primary}
+\setlist[itemize]{leftmargin=*,itemsep=1pt,topsep=2pt,parsep=0pt}
+\setlist[enumerate]{leftmargin=*,itemsep=1pt,topsep=2pt,parsep=0pt}
+\titleformat{\section}{\normalsize\bfseries\color{primary}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\small\bfseries\color{primary}}{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{8pt}{3pt}
+\titlespacing*{\subsection}{0pt}{5pt}{2pt}
+\captionsetup{font=small,skip=3pt}
+\setlength{\parskip}{2pt}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\begin{document}
+
+{\large\bfseries\color{primary} Technical Report: Evaluating Generative Agent Simulation Performance}\\[2pt]
+{\small Beauty \& Wellbeing Company $\cdot$ Evaluation on Held-out Open-Ended Responses}\\[1pt]
+{\scriptsize Reference method: Park et al., \textit{LLM Agents Grounded in Self-Reports} (arXiv:2411.10109)}\\[-2pt]
+{\color{primary}\rule{\textwidth}{0.8pt}}
+
+\section{Business Context}
+
+The client is a global Beauty \& Wellbeing company with a broad portfolio spanning premium skincare, professional haircare, and everyday personal-care essentials. Its products are sold through standalone brand stores, major retail chains, and e-commerce platforms. A strategic growth priority is increasing relevance and sales among young business professionals who work long hours and travel frequently.
+
+To support this goal, the company is developing human simulations: person-specific LLM agents grounded in in-depth interviews with members of this target demographic. The intended use is to generate early consumer hypotheses, explore product and channel needs, and improve research speed. The commercial value depends on more than fluent or plausible answers. A useful simulation must preserve the person's actual constraints, habits, uncertainty, channel preferences, and level of involvement in beauty decisions.
+
+Two open-ended text-chat interviews were conducted per person. The first informed construction of the simulation; the second was held out for evaluation. This report evaluates a selected subset of the held-out questions. The central business risk is that an agent may produce polished, socially desirable answers that sound like a target consumer while changing the consumer's real decision logic.
+
+\section{Evaluation Concept}
+
+The evaluation is performed at the individual level across shopping behaviour, product preferences, influences, and brand loyalty. It uses complementary lenses because no single automatic metric captures commercial fidelity:
+
+\begin{enumerate}
+    \item \textbf{Semantic and lexical similarity}: embedding cosine, BERTScore, and ROUGE-L.
+    \item \textbf{Fact consistency}: atomic claims, constraints, and explicit rejections coded as match, omit, contradict, or invent.
+    \item \textbf{Lifestyle and stylistic congruence}: travel/time signals, hedging, length, certainty, and level of involvement.
+    \item \textbf{Holistic fidelity}: expert 1--5 judgment of whether the answer sounds like the same person on a blind read.
+\end{enumerate}
+
+This separation distinguishes \textit{what} is said from \textit{how} it is said and from overall persona fidelity. It is particularly important for this business case: a fluent answer that invents bulk buying, erases indifference, or misses a home-versus-travel constraint could lead to the wrong product, assortment, or messaging decision.
+
+\section{Data and Key Results}
+
+\textbf{Sample:} 3 individuals $\times$ 10 held-out questions (30 Human vs AI pairs). Profiles include a pragmatic low-involvement shopper (c), a high-involvement Korean skincare enthusiast (s), and a convenience-driven supermarket shopper (g).
+
+\subsection{Quantitative highlights}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\textbf{Data Metrics}\\
+\midrule
+\textbf{Metric} & \textbf{Human} & \textbf{AI} \\
+\midrule
+Mean word count & 31.2 & 54.5 (+75\%) \\
+Abstract language present & 26.7\% & 70.0\% \\
+\midrule
+\textbf{Semantic / Content Similarity Metrics} &  Score\\
+\midrule
+Cosine similarity (mean) & \multicolumn{2}{c}{0.585} \\
+BERTScore F1 (mean) & \multicolumn{2}{c}{0.856} \\
+ROUGE-L F1 (mean) & \multicolumn{2}{c}{0.153} \\
+\bottomrule
+\end{tabular}
+
+AI answers are substantially longer and more abstract. Strong BERTScore and moderate embedding similarity suggest broad contextual alignment, while low ROUGE-L indicates that the alignment is usually paraphrastic and expansive rather than verbatim. Automatic metrics therefore suggest topical relevance, not guaranteed persona fidelity.
+
+\subsection{Qualitative highlights}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Person} & \textbf{Fact consistency} & \textbf{Holistic score} & \textbf{Main failure modes} \\
+\midrule
+c\_human & Low--Moderate & 2.6 / 5 & Bulk-buying invention; celebrity mismatch \\
+s\_human & High (products) & 3.7 / 5 & Bulk face products; celebrity substitution \\
+g\_human & Moderate & 2.3 / 5 & Travel packaging collapsed; bulk invention \\
+\midrule
+Overall & -- & $\approx$2.9 / 5 & Involvement inflated; uncertainty erased \\
+\bottomrule
+\end{tabular}
+
+Across all three people, the simulations frequently invent or exaggerate bulk buying, elevate sustainability or ingredient consciousness, replace indifference with assertive rationales, and lose situational distinctions such as home versus travel packaging. These are commercially material distortions because the target segment's purchase behaviour may be driven by convenience, habit, availability, and time pressure rather than high engagement.
+
+\section{Insights and Business Implications}
+
+\textbf{What works.} Distinctive product knowledge and broad shopping channels are reproduced relatively well when clearly expressed in the source, especially for the high-involvement profile. Agents remain first-person and on-topic, and they do not impose a heavy ``busy traveller'' stereotype where the source provides no evidence.
+
+\textbf{What does not.} Low-involvement signals are systematically overwritten. Explicit constraints and rejections are fragile, while style is homogenised toward polished, market-research-ready prose. The agents consequently risk overstating deliberation, brand loyalty, sustainability interest, and willingness to bulk-buy among convenience-led consumers.
+
+\textbf{Commercial implication.} The current simulations are suitable for early hypothesis generation and exploratory research, particularly for higher-involvement consumers. They should not yet substitute for human validation in decisions about segment sizing, assortment, claims, packaging, or messaging for low-involvement and time-constrained shoppers. Travel-related needs deserve special attention: the dataset contains limited explicit travel language, but one clear home-versus-travel packaging distinction was not preserved.
+
+\textbf{Methodological implication.} A multi-layer evaluation is necessary. Embedding similarity alone would have made the system appear stronger than the qualitative review supports. Fact consistency, uncertainty preservation, lifestyle congruence, and holistic blind-read judgments expose failure modes that are commercially more important than fluency.
+
+\section{Recommendations}
+
+\begin{enumerate}
+    \item \textbf{Improve grounding:} Enrich interviews with explicit probes on bulk buying, travel routines, channel switching, brand indifference, and situational preferences.
+    \item \textbf{Preserve constraints:} Instruct agents to retain stated uncertainty, explicit rejections, low involvement, and distinctions between home, work, and travel contexts.
+    \item \textbf{Strengthen evaluation:} Flag indifference and hedging expressions; add ranking and forced-choice tasks; collect test--retest data to estimate an individual consistency ceiling.
+    \item \textbf{Set a use policy:} Use simulations as research accelerators and hypothesis generators; require human validation before decisions that depend on low-involvement behaviour or precise lifestyle constraints.
+\end{enumerate}
+
+{\color{primary}\rule{\textwidth}{0.6pt}}\\[-1pt]
+{\scriptsize This report synthesises automated semantic metrics and structured qualitative coding of 30 Human vs AI pairs. Full quantitative tables, figures, notebooks, coding notes, and the extended qualitative report are included in the accompanying project materials.}
+
+\end{document}

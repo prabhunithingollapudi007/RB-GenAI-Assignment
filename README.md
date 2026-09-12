@@ -47,6 +47,9 @@ Whitespace is normalized in the clean table. Original workbook values are preser
 
 - [Quantitative analysis report](reports/quantitative_analysis_report.md): preprocessing and automatic evaluation findings with tables and figures.
 - [Qualitative evaluation report](reports/Qualitative_Evaluation_Report.md): fact consistency, lifestyle congruence, style, holistic judgments, failure modes, and recommendations.
+- [Two-page technical report source](reports/Technical_Report_2page.tex): business context, evaluation framework, headline results, implications, and recommendations in LaTeX format.
+- [Evaluation report PDF](evaluation%20of%20human%20simulated%20responses.pdf): formatted report deliverable for review or submission.
+- [Presentation slide deck](A-rigorous-method-to-know-when-our-generative-agents-can-be-trusted.pptx): presentation of the evaluation approach, findings, and recommendations.
 - [Preprocessing notebook](notebooks/preprocessed_pipeline_analysis.ipynb): data quality and text-feature exploration.
 - [Semantic notebook](notebooks/semantic_similarity_analysis.ipynb): cosine, BERTScore, ROUGE-L, distributions, correlations, and outliers.
 - `data/processed/`: reproducible clean tables, row-level features, semantic scores, summaries, metadata, and artifact flags.
@@ -129,12 +132,3 @@ The notebooks in `notebooks/` are ready to run with the project `.venv` kernel:
 - `semantic_similarity_analysis.ipynb`: cosine similarity, BERTScore, ROUGE-L, metric distributions, category comparisons, correlations, and pair outliers.
 
 Concrete and abstract language indicators are transparent lexicon-based heuristics. Similarity metrics measure relatedness, contextual alignment, and ordered word overlap; they do not establish factual correctness, persona fidelity, or answer quality on their own. The dataset is small and category counts are uneven, so findings are descriptive rather than statistically powered.
-
-## Submission Checklist
-
-- Source workbook and assignment brief are in `data/raw/`.
-- All generated tables and metadata are in `data/processed/`.
-- Both notebooks are included and use repository-relative paths.
-- Quantitative and qualitative reports are included in `reports/`.
-- Figures are included in `reports/figures/`.
-- Tests pass with `python -m unittest discover -s tests -v`.
