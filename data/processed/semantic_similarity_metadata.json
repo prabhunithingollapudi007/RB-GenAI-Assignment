@@ -1,0 +1,14 @@
+{
+  "input_file": "C:\\Users\\prabh\\Documents\\Interview Prep\\tmp2\\data\\processed\\paired_answers_clean.csv",
+  "model_name": "sentence-transformers/all-mpnet-base-v2",
+  "metrics": [
+    "cosine similarity of L2-normalized sentence embeddings",
+    "BERTScore precision, recall, and F1",
+    "ROUGE-L precision, recall, and F1"
+  ],
+  "row_count": 30,
+  "notes": [
+    "Scores compare each human answer with the AI answer in the same workbook row.",
+    "Cosine similarity is a semantic relatedness signal, not a factual or quality score."
+  ]
+}

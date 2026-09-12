@@ -1,0 +1,61 @@
+row_number,Person ID,Question Category,response_type,word_count,character_count,unique_word_count,lexical_diversity,concrete_term_count,abstract_term_count,has_concrete_language,has_abstract_language,mentions_travel,mentions_time,mentions_stress,mentions_professional_image
+2,c_human,shopping behavior,Human,29,167,26,0.896551724137931,3,1,True,True,False,False,False,False
+2,c_human,shopping behavior,AI,53,318,46,0.8679245283018868,5,1,True,True,False,True,False,False
+3,s_human,shopping behavior,Human,34,183,30,0.8823529411764706,4,0,True,False,False,False,False,False
+3,s_human,shopping behavior,AI,59,374,52,0.8813559322033898,8,2,True,True,False,False,False,False
+4,g_human,shopping behavior,Human,34,213,31,0.9117647058823529,2,1,True,True,False,True,False,False
+4,g_human,shopping behavior,AI,35,203,28,0.8,5,2,True,True,False,False,False,False
+5,c_human,product preferences,Human,18,92,16,0.8888888888888888,1,0,True,False,False,False,False,False
+5,c_human,product preferences,AI,49,271,39,0.7959183673469388,7,2,True,True,False,False,False,False
+6,s_human,product preferences,Human,18,103,17,0.9444444444444444,2,0,True,False,False,False,False,False
+6,s_human,product preferences,AI,62,366,52,0.8387096774193549,6,1,True,True,False,False,False,False
+7,g_human,product preferences,Human,30,187,26,0.8666666666666667,1,0,True,False,False,False,False,False
+7,g_human,product preferences,AI,51,278,43,0.8431372549019608,3,3,True,True,False,True,False,False
+8,c_human,product preferences,Human,20,106,19,0.95,0,1,False,True,False,False,False,False
+8,c_human,product preferences,AI,50,313,44,0.88,4,1,True,True,False,False,False,False
+9,s_human,product preferences,Human,21,114,21,1.0,1,0,True,False,False,False,False,False
+9,s_human,product preferences,AI,47,285,35,0.7446808510638298,4,0,True,False,False,False,False,False
+10,g_human,product preferences,Human,64,390,46,0.71875,3,0,True,False,True,False,False,False
+10,g_human,product preferences,AI,49,296,44,0.8979591836734694,4,0,True,False,False,False,False,False
+11,c_human,shopping behavior,Human,14,63,12,0.8571428571428571,0,0,False,False,False,False,False,False
+11,c_human,shopping behavior,AI,30,174,26,0.8666666666666667,0,0,False,False,False,False,False,False
+12,s_human,shopping behavior,Human,23,109,21,0.9130434782608695,3,0,True,False,False,False,False,False
+12,s_human,shopping behavior,AI,49,271,42,0.8571428571428571,2,0,True,False,False,False,False,False
+13,g_human,shopping behavior,Human,36,191,32,0.8888888888888888,2,0,True,False,False,False,False,False
+13,g_human,shopping behavior,AI,41,247,36,0.8780487804878049,2,2,True,True,False,False,False,False
+14,c_human,influences,Human,25,153,25,1.0,0,0,False,False,False,False,False,False
+14,c_human,influences,AI,31,222,27,0.8709677419354839,2,2,True,True,False,False,False,False
+15,s_human,influences,Human,35,166,30,0.8571428571428571,0,0,False,False,False,True,False,False
+15,s_human,influences,AI,48,304,41,0.8541666666666666,6,4,True,True,False,False,False,False
+16,g_human,influences,Human,35,185,33,0.9428571428571428,0,0,False,False,False,False,False,False
+16,g_human,influences,AI,34,229,29,0.8529411764705882,0,1,False,True,False,False,False,False
+17,c_human,product preferences,Human,30,163,25,0.8333333333333334,1,0,True,False,False,False,False,False
+17,c_human,product preferences,AI,39,217,35,0.8974358974358975,4,0,True,False,False,True,False,False
+18,s_human,product preferences,Human,36,187,29,0.8055555555555556,4,0,True,False,False,False,False,False
+18,s_human,product preferences,AI,47,278,39,0.8297872340425532,5,2,True,True,False,True,False,False
+19,g_human,product preferences,Human,42,261,35,0.8333333333333334,3,0,True,False,False,False,False,False
+19,g_human,product preferences,AI,50,259,42,0.84,2,1,True,True,False,True,False,False
+20,c_human,product preferences,Human,17,107,15,0.8823529411764706,1,2,True,True,False,False,False,False
+20,c_human,product preferences,AI,86,492,70,0.813953488372093,2,3,True,True,False,False,False,False
+21,s_human,product preferences,Human,75,398,49,0.6533333333333333,5,1,True,True,False,False,False,False
+21,s_human,product preferences,AI,70,426,54,0.7714285714285715,1,0,True,False,False,False,False,False
+22,g_human,product preferences,Human,54,303,41,0.7592592592592593,2,0,True,False,False,False,False,False
+22,g_human,product preferences,AI,60,340,49,0.8166666666666667,0,1,False,True,False,False,False,False
+23,c_human,product preferences,Human,4,22,4,1.0,0,0,False,False,False,False,False,False
+23,c_human,product preferences,AI,71,397,54,0.7605633802816901,0,0,False,False,False,False,False,False
+24,s_human,product preferences,Human,28,159,22,0.7857142857142857,0,0,False,False,False,False,False,False
+24,s_human,product preferences,AI,81,478,59,0.7283950617283951,2,4,True,True,False,False,False,False
+25,g_human,product preferences,Human,52,298,38,0.7307692307692307,4,0,True,False,False,False,False,False
+25,g_human,product preferences,AI,49,275,41,0.8367346938775511,1,0,True,False,False,False,False,False
+26,c_human,brand loyalty,Human,23,109,20,0.8695652173913043,3,0,True,False,False,False,False,False
+26,c_human,brand loyalty,AI,97,479,71,0.7319587628865979,5,1,True,True,False,False,False,False
+27,s_human,brand loyalty,Human,29,136,20,0.6896551724137931,4,1,True,True,False,False,False,False
+27,s_human,brand loyalty,AI,36,259,32,0.8888888888888888,3,4,True,True,False,False,False,False
+28,g_human,brand loyalty,Human,28,165,25,0.8928571428571429,2,3,True,True,False,False,False,False
+28,g_human,brand loyalty,AI,52,267,42,0.8076923076923077,3,1,True,True,False,False,False,False
+29,c_human,shopping behavior,Human,11,55,11,1.0,2,0,True,False,False,False,False,False
+29,c_human,shopping behavior,AI,101,560,69,0.6831683168316832,5,4,True,True,False,False,False,False
+30,s_human,shopping behavior,Human,27,137,23,0.8518518518518519,2,0,True,False,False,False,False,False
+30,s_human,shopping behavior,AI,60,397,52,0.8666666666666667,7,3,True,True,False,False,False,False
+31,g_human,shopping behavior,Human,43,239,29,0.6744186046511628,5,1,True,True,False,False,False,False
+31,g_human,shopping behavior,AI,48,240,40,0.8333333333333334,4,0,True,False,False,False,False,False

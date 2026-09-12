@@ -1,0 +1,13 @@
+response_type,metric,count,percent
+Human,has_concrete_language,23,76.66666666666667
+Human,has_abstract_language,8,26.666666666666668
+Human,mentions_travel,1,3.3333333333333335
+Human,mentions_time,2,6.666666666666667
+Human,mentions_stress,0,0.0
+Human,mentions_professional_image,0,0.0
+AI,has_concrete_language,26,86.66666666666667
+AI,has_abstract_language,21,70.0
+AI,mentions_travel,0,0.0
+AI,mentions_time,5,16.666666666666664
+AI,mentions_stress,0,0.0
+AI,mentions_professional_image,0,0.0

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rb-genai-analysis"
+version = "0.1.0"
+description = "Analysis pipeline for paired human and AI personal-care responses"
+requires-python = ">=3.10"
+dependencies = [
+    "bert-score>=0.3.13",
+    "pandas>=2.0",
+    "openpyxl>=3.1",
+    "rouge-score>=0.1.2",
+    "seaborn>=0.13",
+    "sentence-transformers>=3.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

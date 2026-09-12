@@ -1,0 +1,6 @@
+field,missing_count,missing_percent,unique_count
+Person ID,0,0.0,3
+Question Category,0,0.0,4
+Question Text,0,0.0,10
+Human Answer,0,0.0,30
+AI Answer,0,0.0,30

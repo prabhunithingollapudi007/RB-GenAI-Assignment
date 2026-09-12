@@ -1,0 +1,28 @@
+{
+  "source_file": "RB_GenAI_Datatest.xlsx",
+  "sheet_names": [
+    "answer_pairs"
+  ],
+  "sheet_used": "answer_pairs",
+  "raw_shape": [
+    30,
+    6
+  ],
+  "paired_shape": [
+    30,
+    5
+  ],
+  "raw_columns": [
+    "id",
+    "question_category",
+    "question",
+    "person_id",
+    "human_answers",
+    "ai_answers"
+  ],
+  "artifact_count": 21,
+  "notes": [
+    "Concrete and abstract language counts use transparent, small lexicons and are heuristic.",
+    "Raw workbook values are preserved in the source workbook; clean outputs normalize whitespace only."
+  ]
+}

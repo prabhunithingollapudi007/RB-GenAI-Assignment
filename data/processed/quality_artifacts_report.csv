@@ -1,0 +1,22 @@
+row_number,response_type,artifact,detail
+3,AI,non_ascii_characters,😊
+12,AI,non_ascii_characters,😊
+15,AI,non_ascii_characters,’
+18,AI,non_ascii_characters,😊
+20,AI,non_ascii_characters,—’
+21,AI,non_ascii_characters,’
+22,AI,non_ascii_characters,—’
+23,AI,non_ascii_characters,–—’
+24,AI,non_ascii_characters,–’
+25,AI,non_ascii_characters,’
+26,AI,non_ascii_characters,—’
+28,AI,non_ascii_characters,’
+29,AI,non_ascii_characters,—’
+30,AI,non_ascii_characters,’
+31,AI,non_ascii_characters,’
+10,Human,unusually_long_response,64 words; threshold 57.1
+21,Human,unusually_long_response,75 words; threshold 57.1
+20,AI,unusually_long_response,86 words; threshold 79.5
+24,AI,unusually_long_response,81 words; threshold 79.5
+26,AI,unusually_long_response,97 words; threshold 79.5
+29,AI,unusually_long_response,101 words; threshold 79.5

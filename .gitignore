@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.vscode/
+
+# Local model caches and temporary report files
+.cache/
+reports/figures/*.tmp
